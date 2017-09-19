@@ -54,7 +54,7 @@ passport.use('employee', new Auth0Strategy({
   domain: config.domain,
   clientID: config.clientId1,
   clientSecret: config.clientSecret1,
-  callbackURL: config.callBackUrl1
+  callbackURL: 'http://165.227.99.251:3001/auth/callback1'
 }, function(accessToken, refreshToken, extraParams, profile, done) {
   //GO TO DB TO FIND AND CREATE USER
   console.log(profile)
@@ -103,7 +103,7 @@ passport.use('employer',new Auth0Strategy({
   domain: config.domain,
   clientID: config.clientId2,
   clientSecret: config.clientSecret2,
-  callbackURL: config.callBackurl2
+  callbackURL: 'http://165.227.99.251:3001/auth/callback2'
 }, function(accessToken, refreshToken, extraParams, profile, done) {
   //GO TO DB TO FIND AND CREATE USER
 	console.log('profile', profile)
