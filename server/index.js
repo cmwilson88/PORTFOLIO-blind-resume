@@ -25,7 +25,7 @@ app.use(session({
 	saveUninitialized: true
 }));
 app.use(cors());
-app.use(express.static(`${__dirname}/../public/dist`));
+app.use(express.static(`${__dirname}/../public/`));
 app.use(passport.initialize())
 app.use(passport.session())
 
@@ -54,7 +54,7 @@ passport.use('employee', new Auth0Strategy({
   domain: config.domain,
   clientID: config.clientId1,
   clientSecret: config.clientSecret1,
-  callbackURL: 'http://165.227.99.251:3001/auth/callback1/'
+  callbackURL: config.callBackUrl1
 }, function(accessToken, refreshToken, extraParams, profile, done) {
   //GO TO DB TO FIND AND CREATE USER
   console.log(profile)
@@ -103,7 +103,7 @@ passport.use('employer',new Auth0Strategy({
   domain: config.domain,
   clientID: config.clientId2,
   clientSecret: config.clientSecret2,
-  callbackURL: 'http://165.227.99.251:3001/auth/callback2'
+  callbackURL: config.callBackurl2
 }, function(accessToken, refreshToken, extraParams, profile, done) {
   //GO TO DB TO FIND AND CREATE USER
 	console.log('profile', profile)
