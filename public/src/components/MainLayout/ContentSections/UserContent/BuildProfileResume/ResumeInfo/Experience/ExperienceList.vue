@@ -43,7 +43,7 @@ export default {
 	methods: {
 		addExperience() {
 			if(this.resumeID) {
-				return axios.post(`http://localhost:3000/api/${this.resumeID}/experience/new`, 
+				return axios.post(`/api/${this.resumeID}/experience/new`, 
 						 {
 						 	title: this.newExperience.title,
 						 	company: this.newExperience.company,

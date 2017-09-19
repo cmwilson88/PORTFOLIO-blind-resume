@@ -41,17 +41,17 @@ const mutations = {
 
 const actions = {
 	getIndustries({commit}) {
-		return axios.get(`http://localhost:3000/api/industries`)
+		return axios.get(`/api/industries`)
 					.then(res => commit('GET_INDUSTRIES', res.data))
 					.catch(err => console.log(err))
 	},
 	getJobTypes({commit}) {
-		return axios.get(`http://localhost:3000/api/jobtypes`)
+		return axios.get(`/api/jobtypes`)
 					.then(res => commit('GET_JOB_TYPES', res.data))
 					.catch(err => console.log(err))
 	},
 	getAllJobPostings({commit}) {
-		return axios.get(`http://localhost:3000/api/job_postings`)
+		return axios.get(`/api/job_postings`)
 					.then(res => commit('GET_ALL_JOB_POSTINGS', res.data))
 					.catch(err => console.log(err))
 	},

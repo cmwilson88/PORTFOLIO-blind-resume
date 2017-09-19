@@ -17,7 +17,7 @@
 				 Default Header Content
 			</slot>
 		<div class="sign-out">
-			<a href="http://localhost:3000/auth/logout">
+			<a href="http://165.227.99.251:3001/auth/logout">
 				<button type="button" class="logout-button">Logout</button>
 			</a>
 		</div>

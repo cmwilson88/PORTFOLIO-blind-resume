@@ -41,7 +41,7 @@
 		},
 		methods: {
 			getLongJobpost() {
-				return axios.get(`http://localhost:3000/api/${this.$route.params.company_id}/posts/${this.$route.params.job_post_id}`)
+				return axios.get(`/api/${this.$route.params.company_id}/posts/${this.$route.params.job_post_id}`)
 					.then(res => {
 						this.longjobpost = res.data[0]
 						console.log(this.longjobpost)

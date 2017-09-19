@@ -25,13 +25,13 @@ export default {
 	},
 	methods: {
 		getCompanyInfo() {
-			return axios.get(`http://localhost:3000/api/company/${this.$route.params.company_id}`)
+			return axios.get(`/api/company/${this.$route.params.company_id}`)
 					.then(response => {
 						this.companyInfo = response.data[0]
 					}).catch(err => console.log(err))
 		},
 		getJobPosts() {
-			return axios.get(`http://localhost:3000/api/${this.$route.params.company_id}/job_postings`)
+			return axios.get(`/api/${this.$route.params.company_id}/job_postings`)
 						.then(res => {
 							this.companyJobPosts = res.data
 						}).catch(err => console.log(err))

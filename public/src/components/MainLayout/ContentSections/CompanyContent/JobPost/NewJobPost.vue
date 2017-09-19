@@ -78,7 +78,7 @@ export default {
 			this.newJobPost.jobQualifications = val;
 		},
 		createNewJobPost() {
-			return axios.post(`http://localhost:3000/api/${this.$route.params.company_id}/job_post/new`,
+			return axios.post(`/api/${this.$route.params.company_id}/job_post/new`,
 					{
 						industry: this.newJobPost.jobDescription.industry,
 						jobType: this.newJobPost.jobDescription.jobType,

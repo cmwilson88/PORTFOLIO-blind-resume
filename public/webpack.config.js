@@ -47,7 +47,7 @@ module.exports = {
     noInfo: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:3001',
         changeOrigin: true
       }
     }

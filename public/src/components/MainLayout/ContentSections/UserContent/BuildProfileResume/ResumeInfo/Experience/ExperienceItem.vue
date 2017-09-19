@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     updateResumeExperience() {
-      return axios.patch(`http://localhost:3000/api/experience/${this.propExperience.id}`,
+      return axios.patch(`/api/experience/${this.propExperience.id}`,
         {
           title: this.propExperience.title,
           company: this.propExperience.company,
@@ -90,7 +90,7 @@ export default {
       }).catch(err => console.log(err))
     },
     deleteResumeExperience() {
-      return axios.delete(`http://localhost:3000/api/experience/${this.propExperience.id}`)
+      return axios.delete(`/api/experience/${this.propExperience.id}`)
         .then(res => {
           this.isEditingExperience = false;
           this.$emit('deletedExp', res.data[0].id)

@@ -28,7 +28,7 @@ export default {
 	},
 	methods: {
 		getJobposts() {
-			return axios.get(`http://localhost:3000/api/${this.$route.params.company_id}/job_postings`)
+			return axios.get(`/api/${this.$route.params.company_id}/job_postings`)
 									.then(res => {
 										this.shortjobposts = res.data
 									})

@@ -45,7 +45,7 @@
 		methods: {
 			addEducation() {
 				if(this.resumeID) {
-					return axios.post(`http://localhost:3000/api/${this.resumeID}/education/new`,
+					return axios.post(`/api/${this.resumeID}/education/new`,
 							{
 								school: this.newEducation.school,
 								degree: this.newEducation.degree,

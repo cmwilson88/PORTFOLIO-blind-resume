@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     updateResumeEducation() {
-      return axios.patch(`http://localhost:3000/api/education/${this.propsEducationInfo.id}`, 
+      return axios.patch(`/api/education/${this.propsEducationInfo.id}`, 
           {
             school: this.propsEducationInfo.school,
             degree: this.propsEducationInfo.degree,
@@ -102,7 +102,7 @@ export default {
          .catch(err => console.log(err))
     },
     deleteResumeEducation() {
-      return axios.delete(`http://localhost:3000/api/education/${this.propsEducationInfo.id}`)
+      return axios.delete(`/api/education/${this.propsEducationInfo.id}`)
               .then(res => {
                 this.$emit('deletedEdu', res.data[0].id)
                 this.isEditingEducation = false

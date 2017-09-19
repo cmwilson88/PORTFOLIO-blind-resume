@@ -41,7 +41,7 @@
 	  },
 	  methods: {
 	  	addNewSkill() {
-	  		return axios.post(`http://localhost:3000/api/${this.userResume.id}/skill/new`, 
+	  		return axios.post(`/api/${this.userResume.id}/skill/new`, 
 	  			{
 	  				name: this.newSkill
 	  			}

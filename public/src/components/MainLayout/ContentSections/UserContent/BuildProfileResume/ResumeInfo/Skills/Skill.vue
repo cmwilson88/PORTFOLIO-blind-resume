@@ -12,7 +12,7 @@
 	  props: ['propskill', 'isEditing'],
 	  methods: {
 	  	deleteResumeSkill() {
-	  		return axios.delete(`http://localhost:3000/api/skill/${this.propskill.id}`)
+	  		return axios.delete(`/api/skill/${this.propskill.id}`)
 	  			.then(res => {
 	  				this.$emit('skillDeleted', res.data[0].id)
 	  			})
